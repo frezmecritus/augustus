@@ -125,6 +125,10 @@ static void add_definition(const hotkey_mapping *mapping)
             def->action = &data.hotkey_state.show_advisor;
             def->value = ADVISOR_CHIEF;
             break;
+        case HOTKEY_SHOW_ADVISOR_HOUSING:
+            def->action = &data.hotkey_state.show_advisor;
+            def->value = ADVISOR_HOUSING;
+            break;
         case HOTKEY_SHOW_OVERLAY_WATER:
             def->action = &data.hotkey_state.show_overlay;
             def->value = OVERLAY_WATER;
@@ -263,7 +267,7 @@ static void add_definition(const hotkey_mapping *mapping)
             break;
         case HOTKEY_BUILD_RESERVOIR:
             def->action = &data.hotkey_state.building;
-            def->value = BUILDING_RESERVOIR;
+            def->value = BUILDING_DRAGGABLE_RESERVOIR;
             break;
         case HOTKEY_BUILD_AQUEDUCT:
             def->action = &data.hotkey_state.building;
